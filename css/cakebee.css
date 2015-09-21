@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco);
+
+.logo {
+	height:75px;
+}
+
+.banner-img {
+	width:100%;
+	min-height: 200px;
+}
+
+.heading1 {
+    font-family: 'Pacifico', cursive;
+	font-size: 30px;
+	color:#00A37A;
+}
+.heading2 {
+	font-family: 'Pacifico', cursive;
+	font-size: 20px;
+	color:#00A37A;
+}
+.heading3 {
+	font-family: 'Sue Ellen Francisco', cursive;
+	font-size: 25px;
+}
+
+.inputs {
+	padding: 4px;
+}
+
+.footer {
+	background-color: WhiteSmoke;
+	border-top: 1px solid LightGray;
+	border-bottom: 1px solid LightGray;
+	padding-bottom:30px;
+	padding-top: 20px;
+}
