@@ -3,6 +3,8 @@ var myFirebaseRef = new Firebase("https://blazing-fire-9669.firebaseio.com/");
 
 $(document).ready(function() {
 
+	//Initially hide add another section
+	$('#add-another-section').hide();
 
   	myFirebaseRef.child('launch-timeline').on('value', function(snapshot) {
 	  //Update HTML span element launch-timeline
@@ -17,29 +19,49 @@ $(document).ready(function() {
 	}
 	
 	//Config for datepicker
-  	$('#datetimepicker5').datetimepicker({
+  	$('#datetimepicker').datetimepicker({
 		format: 'DD-MM-YYYY',
         enabledDates: enabledDatesArray
     });
+    
 
-  	//pre-order button click logic
+  	//Pre-order button click logic
+  	//1.Prevent default action for form submit
+	$("#preorder-form").submit(function(e){
+	    return false;
+	});
+	//2. Add submitted data to Firebase, clear and hide the section.
   	$('#preorder-button').click(function() {
-
   		var email = $('#email').val();
+  		var mobilenumber= $('#mobilenumber').val();
   		var city  = $('#city').val();
   		var date = $('#date').val();
-  		console.log('Going to save: ' + email, city, date);
-
   		var preorder = {
   			email: email,
+  			mobilenumber: mobilenumber,
   			city: city,
   			date: date
   		};
   		console.log('Formed JSON as: ' + JSON.stringify(preorder));
-
   		myFirebaseRef.child('preorders').push(preorder);
-    
+  		console.log('Saved.');
+  		$("#preorder-form").trigger('reset');
+  		//hide pre-order form
+  		$( "#preorder-section" ).hide();
+  		//show add-another section
+  		$( "#add-another-section" ).show();
   	});
+  	
+  	//Show preorder section
+  	$('#add-another-btn').click(function() {
+  		$( "#add-another-section" ).hide();
+  		$( "#preorder-section" ).show();
+  	});
+
+    
 });
+    
+  	
+
 
 

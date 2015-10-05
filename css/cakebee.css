@@ -15,11 +15,13 @@
 	font-size: 30px;
 	color:#00A37A;
 }
+
 .heading2 {
 	font-family: 'Pacifico', cursive;
 	font-size: 20px;
 	color:#00A37A;
 }
+
 .heading3 {
 	font-family: 'Sue Ellen Francisco', cursive;
 	font-size: 25px;
@@ -35,4 +37,9 @@
 	border-bottom: 1px solid LightGray;
 	padding-bottom:30px;
 	padding-top: 20px;
+}
+.text{
+	font-family: 'Sue Ellen Francisco', cursive;
+	font-size: 40px;
+	
 }

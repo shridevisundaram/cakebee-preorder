@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CakeBee | The Sweet Sting</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/build/css/bootstrap-datetimepicker.css" />
+
     <link rel="stylesheet" href="css/cakebee.css"/>
   </head>
 
@@ -50,38 +52,61 @@
       <br/>
 
       <!-- INPUT FORM -->
-      <div class="row footer">
-        <center>
-          <p class="heading3">Pre-order and we'll remind you to surprise your loved ones with a delicious cake for 25% off!</p>
-        </center>
-        <div class="col-xs-12 col-md-1"></div>
-        <div class="col-xs-12 col-md-3 inputs">
-          <input type="email" id="email" class="form-control" placeholder="Your email">
-        </div>
-        <div class="col-xs-12 col-md-3 inputs">
-          <select id="city" class="form-control">
-            <option>Coimbatore</option>
-            <option>Trichy</option>
-          </select>
-        </div>
-        <div class="col-xs-12 col-md-3 inputs">
-          <div class="form-group">
-            <div class="input-group date" id="datetimepicker5">
-                <input type="text" id="date" class="form-control"  placeholder="Date when you'll need the cake"/>  <span class="input-group-addon"><span class="glyphicon-calendar glyphicon"></span></span>
+      <div class="row footer" id="preorder">
+        <!--Pre order section-->
+        <div id="preorder-section">
+          <center>
+            <p class="heading3">Pre-order and we'll remind you to surprise your loved ones with a delicious cake, we'll pack a free goodie too!</p>
+          </center>
+          <form id="preorder-form" data-toggle="validator" role="form">
+            <div class="col-xs-12 col-md-1"></div>
+            <div class="col-xs-12 col-md-2 inputs">
+              <div class="form-group">
+                <input type="email" id="email" class="form-control" placeholder="Your email" required> 
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-1 inputs">
+            <div class="col-xs-12 col-md-2 inputs">
+              <div class="form-group">
+                <input type="text" id="mobilenumber" class="form-control" placeholder="Optional mobile number"> 
+              </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-2 inputs">
+              <select id="city" class="form-control">
+                <option>Coimbatore</option>
+                <option>Trichy</option>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-3 inputs">
+              <div class="form-group">
+                <div class="input-group date" id="datetimepicker">
+                    <input type="text" id="date" class="form-control"  placeholder="Date when you'll need a cake" required/>
+                    <span class="input-group-addon"><span class="glyphicon-calendar glyphicon"></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-1 inputs">
+              <center>
+                <button id="preorder-button" type="submit" class="btn btn-success">Pre-Order</button>
+              </center>
+            </div>
+            <div class="col-xs-12 col-md-1"></div>
+            <div class="col-xs-12">
+              <center>
+                <p class="text-muted"><small>No payment required at the time of pre-order.</small></p>
+              </center>
+            </div>
+          </form>
+        </div> <!--Pre order section ends -->
+        <!--Add another secion-->
+        <div id="add-another-section" class="col-xs-12">
           <center>
-            <button id="preorder-button" type="submit" class="btn btn-success">Pre-Order</button>
+            <br/>
+            <p class="text"><small>Pre-order saved. Thank you!</small>  <i class="fa fa-smile-o"></i></p>
+            <button id="add-another-btn" class="btn btn-info">Add another pre-order</button>
+            
           </center>
-        </div>
-        <div class="col-xs-12 col-md-1"></div>
-        <div class="col-xs-12">
-          <center>
-            <p class="text-muted"><small>No payment required at the time of pre-order.</small></p>
-          </center>
-        </div>
+        </div> <!--Add another section ends-->
       </div>
     
     </div> <!-- Container ends -->
@@ -93,6 +118,7 @@
     <script src="js/twix.min.js" ></script>
     <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/src/js/bootstrap-datetimepicker.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+    <script type="text/javascript" src="js/validator.min.js"></script>
     <script type="text/javascript" src="js/cakebee.js"></script>
 
   </body>
