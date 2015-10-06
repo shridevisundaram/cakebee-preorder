@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco);
 
+
+
 .logo {
 	height:75px;
 }
@@ -40,6 +42,6 @@
 }
 .text{
 	font-family: 'Sue Ellen Francisco', cursive;
-	font-size: 40px;
+	font-size: 30px;
 	
 }
