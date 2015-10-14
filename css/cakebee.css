@@ -32,9 +32,9 @@
 }
 
 .footer {
-	background-color: #D7CCC8;
-	border-top: 1px solid #BCAAA4;
-	border-bottom: 1px solid #BCAAA4;
+	background-color: WhiteSmoke;
+	border-top: 1px solid LightGray;
+	border-bottom: 1px solid LightGray;
 	padding-bottom:30px;
 	padding-top: 20px;
 }
