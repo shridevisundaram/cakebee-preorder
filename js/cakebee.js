@@ -1,3 +1,18 @@
+//For error reporting
+// Pure JavaScript errors handler
+window.addEventListener('error', function (err) {
+    var lineAndColumnInfo = err.colno ? ' line:' + err.lineno +', column:'+ err.colno : ' line:' + err.lineno;
+    ga(
+        'send',
+        'event',
+        'JavaScript Error',
+        err.message,
+        err.filename + lineAndColumnInfo + ' -> ' +  navigator.userAgent,
+        0,
+        true
+    );
+});
+
 //For Firebase
 var myFirebaseRef = new Firebase("https://blazing-fire-9669.firebaseio.com/");
 
