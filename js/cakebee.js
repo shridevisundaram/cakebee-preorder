@@ -50,11 +50,13 @@ $(document).ready(function() {
   		var mobilenumber= $('#mobilenumber').val();
   		var city  = $('#city').val();
   		var date = $('#date').val();
+      var occassion = $('#occassion').val();
   		var preorder = {
   			email: email,
   			mobilenumber: mobilenumber,
   			city: city,
-  			date: date
+  			date: date,
+        occassion: occassion
   		};
   		console.log('Formed JSON as: ' + JSON.stringify(preorder));
   		myFirebaseRef.child('preorders').push(preorder);
