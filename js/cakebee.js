@@ -55,12 +55,14 @@ $(document).ready(function() {
   		var city  = $('#city').val();
   		var date = $('#date').val();
       var occassion = $('#occassion').val();
+      var now = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
   		var preorder = {
   			email: email,
   			mobilenumber: mobilenumber,
   			city: city,
   			date: date,
-        occassion: occassion
+        occassion: occassion,
+        timestamp: now
   		};
   		console.log('Formed JSON as: ' + JSON.stringify(preorder));
   		myFirebaseRef.child('preorders').push(preorder);
