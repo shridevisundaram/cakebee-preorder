@@ -105,6 +105,17 @@ $(document).ready(function() {
         eventAction: 'website-link-click',
       });
     });
+
+    //Click event for fb
+    $('#fb-link').click(function() {
+      console.log('FB link clicked');
+      //For google analytics 
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'social',
+        eventAction: 'fb-link-click',
+      });
+    });
     
 });
     

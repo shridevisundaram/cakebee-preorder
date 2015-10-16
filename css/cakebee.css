@@ -67,3 +67,11 @@ a:hover
 .cake-icon2 {
 	height: 20px;
 }
+
+.fb-logo {
+	height: 30px;
+}
+
+.fb-logo:hover {
+	opacity: 0.8;
+}
