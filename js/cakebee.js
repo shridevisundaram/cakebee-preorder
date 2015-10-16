@@ -38,6 +38,10 @@ $(document).ready(function() {
 		format: 'DD-MM-YYYY',
         enabledDates: enabledDatesArray
     });
+    //To prevent typing
+    $('#date').bind("keydown keypress", function(e){
+        event.preventDefault();
+    });
 
   	//Pre-order button click logic
   	//1.Prevent default action for form submit
